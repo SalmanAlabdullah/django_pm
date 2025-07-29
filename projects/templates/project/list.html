@@ -3,7 +3,12 @@
     <h3>{% trans "My Project" %}</h3>
     <ul>
         {% for project in object_list %}
-            <li>{{ project.title }}</li>
+            <li>{{ project.title }}<a href="{% url 'Project_update' project.id %}"> Edit</a>
+                <form method="post" action="{% url 'Project_delete' project.id %}">
+                    <button type="submit" >Delete</button>
+                    {% csrf_token %}
+                </form>
+            </li>
         {% empty %}
             <li>{% trans "There are no projects" %}</li>
         {% endfor %}
