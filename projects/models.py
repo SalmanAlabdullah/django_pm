@@ -20,7 +20,7 @@ class Project(models.Model):
     description = models.TextField()
     status = models.IntegerField(
         choices= ProjectStatus.choices,
-        default= ProjectStatus.PENDING
+        default= ProjectStatus.PENDING,
     )
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now_add=True)
