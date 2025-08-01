@@ -3,7 +3,6 @@ from django import forms
 from django.contrib.auth.models import User
 from django.utils.translation import gettext as _
 
-
 attrs = {'class': 'form-control'}
 
 
