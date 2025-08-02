@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-yql-+=_ao3b0cu6p-oiej=d6lsuochdsnv&c3z3n+#rb!(tc*v
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['django-pm-bxkg.onrender.com']
 
 
 # Application definition
