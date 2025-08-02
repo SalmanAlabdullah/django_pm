@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/4.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
-
+import dj_database_url
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -79,15 +79,22 @@ WSGI_APPLICATION = 'projects_management.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
+# DATABASES = {
+#
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': 'django_pm',
+#         'USER': 'postgres',
+#         'PASSWORD' : 'sasasa11',
+#         'HOST':'localhost',
+#         'PORT':''
+#     }
+# }
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'django_pm',
-        'USER': 'postgres',
-        'PASSWORD' : 'sasasa11',
-        'HOST':'localhost',
-        'PORT':''
-    }
+    'default': dj_database_url.config(
+        default='postgresql://postgres:sasasa11@localhost:5432/django_pm',
+        conn_max_age=600
+    )
 }
 
 
