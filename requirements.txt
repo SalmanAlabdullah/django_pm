@@ -4,6 +4,7 @@ backports.tarfile==1.2.0
 bpyutils==0.5.8
 dj-database-url==3.0.1
 Django==4.2.23
+gunicorn==23.0.0
 importlib_metadata==8.7.0
 inflect==7.5.0
 jaraco.collections==5.2.1
