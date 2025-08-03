@@ -92,7 +92,7 @@ WSGI_APPLICATION = 'projects_management.wsgi.application'
 # }
 DATABASES = {
     'default': dj_database_url.config(
-        default='postgresql://postgres:sasasa11@localhost:543/django_pm',
+        default='postgresql://django_db_xgxn_user:GuWclKKWrODT7B0rsK2HvmlM3kUhmSsS@dpg-d27nm0ndiees73cru4pg-a.frankfurt-postgres.render.com/django_db_xgxn',
         conn_max_age=600
     )
 }
